@@ -1,0 +1,215 @@
+@use './fonts'
+@use './variables' as variables
+
+html
+  font-size: 62.5%
+
+:global(body)
+  background: #14181c url(https://s.ltrbxd.com/static/img/content-bg.2f106e08.png) 0 -1px repeat-x
+  font-family: variables.$font-sans-serif
+
+// body, body.gr-homePageBody
+//   background: #14181c url(https://s.ltrbxd.com/static/img/content-bg.2f106e08.png) 0 -1px repeat-x
+//   color: variables.$color-text-default
+//   font-family: 'Graphik Trial', sans-serif
+
+// h1, h2, h3, h4, h5, h6
+//   color: variables.$color-text-default
+
+// .mainContentContainer
+//   padding: 3rem 0
+
+// .doubleStacked
+//   display: none
+
+// .userInfoBoxContent
+//   #profileNameTopHeading
+//     color: variables.$color-link-default
+//     border-bottom: variables.$section-border
+//     font-weight: 600
+//     display: flex
+//     align-items: center
+//     font-size: 2.2rem
+//     font-family: 'Graphik Trial', sans-serif
+//     // padding: 0 0 .4rem 0
+//     span
+//       display: inline-flex
+//       max-width: 45rem
+//       padding-bottom: .2em
+//       line-height: 1.25
+//     .smallText
+//       margin-left: 2.2rem
+//       font-size: 1.1rem
+//       letter-spacing: .075em
+//       font-weight: 600
+//       text-decoration: none
+//       background: variables.$bg-btn-gray
+//       display: inline-block
+//       white-space: nowrap
+//       border-radius: 3px
+//       box-shadow: variables.$shadow-btn-gray
+//       color: variables.$color-btn-gray
+//       line-height: 1.2rem
+//       padding: 7px 10px 6px
+//       user-select: none
+//       &:hover
+//         background: variables.$bg-btn-gray-hover
+//         color: variables.$color-link-default
+//         text-decoration: none
+//   .infoBoxRowTitle
+//     color: variables.$color-link-default
+//     font-weight: 600
+//   .greyText.smallText
+//     display: none
+
+// .userInfoBox .infoBoxRowItem, .userInfoBox .infoBoxRowTitle
+//   font-size: 1.3rem
+
+// .leftContainer
+//   width: 63rem
+
+// .rightContainer
+//   width: 25rem
+//   float: right
+//   margin-left: 0
+
+// a
+//   color: variables.$color-link-default
+
+// .Updates:not(.no_border), tr.update td
+//   border-top: variables.$section-border
+
+// h2.brownBackground
+//   border-bottom: variables.$section-border
+
+//   &, & a
+//     color: variables.$color-text-default
+//     font-weight: 400
+//     font-family: 'Graphik Trial', sans-serif
+//     font-size: 1.3rem
+//     &:hover
+//       color: variables.$color-link-default-hover
+//       text-decoration: none
+
+// .mainContentFloat, .mainContent
+//   background: none
+
+// .actionLinkLite, .userInfoBoxContent
+//   font-family: 'Graphik Trial', sans-serif
+
+// .bookTitle, tr.update .bookTitle
+//   font-family: 'Tiempos Text', serif
+//   font-weight: 600
+//   color: variables.$color-link-default
+//   font-size: 2.2rem
+
+//   &:hover
+//     color: variables.$color-link-default-hover
+//     text-decoration: none
+
+// .readable
+//   font-family: 'Tiempos Text', serif
+//   font-size: 1.5rem
+
+// .userPagePhoto img
+//   max-width: 11rem
+//   border: variables.$section-border
+
+// .circularIcon
+//   &--huge
+//     width: 11rem
+//     height: 11rem
+
+// #featured_shelf
+//   .bigBoxBody
+//     .bigBoxContent
+//       .imgGrid
+//         display: flex
+//         a
+//           flex: 1
+//           img
+//             max-width: 100%
+//             max-height: 80%
+//             border: variables.$section-border
+//             border-radius: 4px
+
+// // .userShowPageShelfListItem
+// //   color: red
+// //   font-family: 'Graphik Trial', sans-serif
+
+// .h2Container.gradientHeaderContainer
+//   padding-bottom: 1px
+
+// #currentlyReadingReviews
+//   .userReview, .actionLink
+//     display: none
+//   .Updates
+//     padding: 1.5rem 0 1.8rem
+//     clear: none
+//     display: flex
+//     .firstcol
+//       float: none
+//       margin-right: 2rem
+//       img
+//         border-radius: 3px
+//         border: variables.$section-border
+//     .secondcol
+//       float: none
+//       br.clear
+//         display: none
+//       table
+//         display: none
+//       .titleCard
+//         small
+//           font-size: 1.8rem
+//           font-family: 'Graphik Trial', sans-serif
+//           font-weight: 300
+//           color: variables.$color-text-dark
+//           margin-left: .4em
+//           .author-metadata
+//             color: variables.$color-text-dark
+//             &:hover
+//               color: variables.$color-link-default-hover
+//               text-decoration: none
+//       &-top
+//         display: flex
+//         flex-direction: column
+//         .started-wrapper
+//           margin-top: 1rem
+//           display: flex
+//           align-items: center
+//           .started-metadata
+//             color: variables.$color-text-darker
+//             display: inline-block
+//             line-height: 2.4rem
+//           .stars
+//             line-height: 2.4rem
+//             margin: 0 .7rem 0 0
+//             position: relative
+//             top: 1px
+//       span.status
+//         font-family: 'Tiempos Text', serif
+//         color: variables.$color-text-default
+//         line-height: 1.5
+//         font-size: 1.5rem
+//       .shelf-wrapper
+//         margin-top: 1.5rem
+//       .progress-wrapper
+//         display: flex
+//         align-items: center
+//         margin-bottom: 1rem
+//         .greyText:not(.smallText)
+//           display: none
+//         .smallText
+//           font-size: 1.3rem
+//           color: #fff
+//           &:hover
+//             text-decoration: none
+//             color: variables.$color-link-default-hover
+//         .progressGraph
+//           background: variables.$bg-progress-dark
+//           border-radius: 2px
+//           .graphBar
+//             background: variables.$accent-blue
+//         .readable
+//           display: none

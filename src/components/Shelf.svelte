@@ -27,6 +27,7 @@
     text-overflow: ellipsis
     white-space: nowrap
     margin: 0 4px 6px 0
+    font-size: 1.3rem
     &:hover
       background-position: right -840px
       color: variables.$color-tag-gray

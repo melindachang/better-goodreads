@@ -1,21 +1,26 @@
-import { parseHTML } from "linkedom";
-
 // // Content scripts
 // // https://developer.chrome.com/docs/extensions/mv3/content_scripts/
 
-import Layout from "../components/Layout.svelte";
-(document.querySelector("#bodycontainer") as HTMLElement).style.display =
-  "none";
+import Layout from '../components/Layout.svelte';
+const originalBody = document.querySelector('#bodycontainer') as HTMLElement;
+originalBody.style.display = 'none';
+document.body.style.margin = '0';
 for (let i = 0; i < document.styleSheets.length; i++)
-  if (document.styleSheets.item(i)!.href)
-    document.styleSheets.item(i)!.disabled = true;
+  if (document.styleSheets.item(i)!.href) document.styleSheets.item(i)!.disabled = true;
 
-const ast = parseHTML(document.documentElement.innerHTML);
-const currentUrl = window.location.href;
+// const ast = parseHTML(document.documentElement.innerHTML);
+const currentUrl = window.location.pathname;
+const userId = Number(
+  (
+    originalBody.querySelector(
+      '.personalNav .dropdown__menu--profileMenu li[role="menuitem Profile"] span a'
+    ) as HTMLAnchorElement
+  ).href.replace(/\D/g, '')
+);
 
-console.log(ast, document.styleSheets);
+console.log(currentUrl);
 
-new Layout({ target: document.body, props: { currentUrl } });
+new Layout({ target: document.body, props: { currentUrl, userId, document } });
 
 // if (window.location.href.includes("/user/show")) {
 //   let span = document.createElement("span");
