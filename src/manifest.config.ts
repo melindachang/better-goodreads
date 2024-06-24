@@ -26,6 +26,7 @@ export default defineManifest(async (env) => ({
     {
       matches: ["http://*.goodreads.com/*", "https://*.goodreads.com/*"],
       js: ["src/content/index.ts"],
+      run_at: "document_start",
     },
   ],
   background: {

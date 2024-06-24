@@ -1,12 +1,21 @@
-// import { storage } from "../storage";
+import { parseHTML } from "linkedom";
 
 // // Content scripts
 // // https://developer.chrome.com/docs/extensions/mv3/content_scripts/
 
-// // Some global styles on the page
-// import "../sass/index.sass";
-// import Shelf from "../components/Shelf.svelte";
-// import Rating from "../components/Rating.svelte";
+import Layout from "../components/Layout.svelte";
+(document.querySelector("#bodycontainer") as HTMLElement).style.display =
+  "none";
+for (let i = 0; i < document.styleSheets.length; i++)
+  if (document.styleSheets.item(i)!.href)
+    document.styleSheets.item(i)!.disabled = true;
+
+const ast = parseHTML(document.documentElement.innerHTML);
+const currentUrl = window.location.href;
+
+console.log(ast, document.styleSheets);
+
+new Layout({ target: document.body, props: { currentUrl } });
 
 // if (window.location.href.includes("/user/show")) {
 //   let span = document.createElement("span");

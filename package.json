@@ -25,6 +25,7 @@
         "vite": "4.2.3"
     },
     "dependencies": {
+        "linkedom": "^0.18.3",
         "sass": "^1.77.6"
     }
 }

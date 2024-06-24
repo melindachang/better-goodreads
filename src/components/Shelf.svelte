@@ -8,7 +8,7 @@
   @use '../sass/variables' as variables
 
   .shelf
-    background-image: url(https://s.ltrbxd.com/static/img/sprite.6c5e9c43.svg)
+    background-image: url(variables.$sprites-url)
     background-position: right -810px
     background-repeat: no-repeat
     background-size: 800px 1020px
